@@ -132,7 +132,8 @@ def maybe_patch_concurrency(argv=sys.argv,
         pass
     else:
         try:
-            patcher = patches[pool]
+            # patcher = patches[pool]
+            patcher = _patch_eventlet
         except KeyError:
             pass
         else:
